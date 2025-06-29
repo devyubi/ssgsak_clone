@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-left: 15%;
+  margin-left: 22%;
 }
 .logo {
   height: 24px;
@@ -40,13 +40,12 @@
 }
 .noti {
   display: inline-block;
-  width: 6px;
-  height: 6px;
-  background-color: red;
+  width: 5px;
+  height: 5px;
+  background-color: #ff5247;
   border-radius: 50%;
   position: absolute;
-  top: -4px;
-  right: -8px;
+  right: -7px;
 }
 .header_horizontal_menu a {
   position: relative;
@@ -59,7 +58,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-right: 15%;
+  margin-right: 22%;
 }
 .skyblue_icon {
   display: flex;
