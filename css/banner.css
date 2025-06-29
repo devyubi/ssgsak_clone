@@ -53,7 +53,7 @@
   height: 48px;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-85%) translateX(580%);
   border-radius: 24px;
 }
 .banner_slide_prev img {
@@ -72,7 +72,7 @@
   height: 48px;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  transform: translateY(-50%) translateX(50%);
+  transform: translateY(-85%) translateX(-580%);
   border-radius: 24px;
 }
 
@@ -130,5 +130,5 @@
 
 .banner_slide_pg button.swiper-pagination-bullet-active {
   opacity: 1;
-  background-color: #837fff;
+  background-color: #1c1c1c;
 }

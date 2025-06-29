@@ -54,8 +54,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Swiper 초기화
   const swiper = new Swiper(".sw_banner", {
-    slidesPerView: 1,
-    spaceBetween: 25,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 80,
     loop: true,
     speed: 1000,
     autoplay: {
