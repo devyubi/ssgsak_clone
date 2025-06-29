@@ -4,7 +4,6 @@
 .banner {
   width: 100%;
   background-color: #fff;
-  padding: 40px 0;
   position: relative;
   overflow: hidden;
 }
@@ -18,6 +17,7 @@
 .sw_banner {
   width: 100%;
   overflow: hidden;
+  max-width: 80%;
 }
 
 /* 개별 슬라이드 */
@@ -35,6 +35,7 @@
 .banner_slide_item img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }

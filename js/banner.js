@@ -59,10 +59,10 @@ window.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 80,
     loop: true,
     speed: 1000,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     navigation: {
       nextEl: ".banner_slide_next",
       prevEl: ".banner_slide_prev",
