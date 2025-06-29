@@ -5,6 +5,13 @@
   /* 컨텐츠 마다 선택사항 */
   outline-style: none;
 }
+* :after,
+:before {
+  border: 0solid #e5e7eb;
+}
+.relative {
+  position: relative;
+}
 
 ul {
   list-style: none;

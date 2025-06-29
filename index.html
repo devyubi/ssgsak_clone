@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Ko">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,27 +15,11 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/header.css" />
     <script src="js/header.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/banner.css" />
+    <script src="js/banner.js"></script>
   </head>
-  <!-- 저작권 안내 -->
-  <!-- <link rel="stylesheet" href="css/popup.css" />
-  <script src="js/popup.js"></script>
-  <div class="popup">
-    <div class="popup_txt">
-      <p>
-        📢<strong> 안내드립니다. </strong><br />
-        😊 이 페이지는 개인 공부 목적으로 제작된 클론 코딩 프로젝트입니다.
-        <br />
-        🔨 제작 목적: 웹 퍼블리싱 및 프론트엔드 개발 연습 <br />
-        📚 사용 기술: HTML, CSS, JavaScript 등 <br />
-        클론 대상: 인터파크 쇼핑몰 서비스 (디자인 및 UI 구조 참고) <br />
-        📌 실제 서비스와 무관하며, 상업적 목적이 전혀 없습니다. <br />
-        📸 본 페이지에 사용된 이미지 및 콘텐츠의 저작권은 **원저작권자(인터파크
-        및 제휴사 등)**에게 있으며, 요청 시 즉시 삭제하도록 하겠습니다. <br />
-        감사합니다. 🙏
-      </p>
-      <button class="popup_close">창닫기</button>
-    </div>
-  </div> -->
   <body>
     <!-- 영역구분 : 내용, 바탕 -->
     <div class="wrap">
@@ -85,7 +69,58 @@
           </div>
         </div>
       </header>
+      <!-- 내용 -->
+      <main class="main">
+        <!-- 배너 -->
+        <div class="banner">
+          <div class="layout">
+            <!-- 배너 슬라이드 -->
+            <div class="banner_wrap">
+              <!-- Swiper -->
+              <div class="sw_banner swiper">
+                <div class="swiper-wrapper">
+                  <!-- API 연동 -->
+                </div>
+              </div>
+              <!-- 좌측이동버튼 -->
+              <button class="banner_slide_prev">
+                <img src="images/slider_arrow.svg" alt="이전" />
+              </button>
+              <!-- 우측이동버튼 -->
+              <button class="banner_slide_next">
+                <img src="images/slider_arrow.svg" alt="우측" />
+              </button>
+              <!-- 페이지네이션-->
+              <div class="banner_slide_pg">
+                <button
+                  class="h-[6px] w-[6px] rounded-full bg-[#1C1C1C] opacity-[.24]"
+                  aria-label="Go to slide 1"
+                ></button>
+                <button
+                  class="h-[6px] w-[6px] rounded-full bg-[#1C1C1C] opacity-[.24]"
+                  aria-label="Go to slide 2"
+                ></button>
+                <button
+                  class="h-[6px] w-[6px] rounded-full bg-[#1C1C1C] opacity-[.24]"
+                  aria-label="Go to slide 3"
+                ></button>
+                <button
+                  class="h-[6px] w-[6px] rounded-full bg-[#1C1C1C] opacity-[.24]"
+                  aria-label="Go to slide 4"
+                ></button>
+                <div class="hidden">
+                  <a href="activity">대외활동</a>
+                  <a href="contest">공모전</a>
+                  <a href="/intern">인턴쉽</a>
+                  <a href="/education">교육/강연</a>
+                  <a href="/recommend">추천 공고</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer></footer>
     </div>
   </body>
-  <footer></footer>
 </html>

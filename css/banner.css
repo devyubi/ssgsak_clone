@@ -1,0 +1,134 @@
+/* banner.css */
+
+/* 전체 배너 영역 */
+.banner {
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 배너 안 레이아웃 */
+.banner_wrap {
+  position: relative;
+}
+
+/* Swiper 슬라이드 wrapper */
+.sw_banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 개별 슬라이드 */
+.swiper-slide {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.02);
+}
+
+/* 슬라이드 이미지 */
+.banner_slide_item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 좌우 화살표 버튼 공통 */
+.banner_slide_prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  transform: translateY(-50%) translateX(-50%);
+  border-radius: 24px;
+}
+.banner_slide_prev img {
+  transform: rotate(180deg);
+}
+.banner_slide_next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(222, 226, 230);
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  transform: translateY(-50%) translateX(50%);
+  border-radius: 24px;
+}
+
+.banner_slide_prev img,
+.banner_slide_next img {
+  width: 20px;
+  height: 20px;
+}
+
+/* 화살표 위치 */
+.banner_slide_prev {
+  left: -10px;
+}
+
+.banner_slide_next {
+  right: -10px;
+}
+
+/* 반응형 조정 */
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 20px 0;
+  }
+
+  .banner_slide_prev,
+  .banner_slide_next {
+    width: 30px;
+    height: 30px;
+  }
+
+  .banner_slide_prev img,
+  .banner_slide_next img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* 페이지네이션 버튼 */
+.banner_slide_pg {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.banner_slide_pg button {
+  background-color: #1c1c1c;
+  width: 8px;
+  height: 8px;
+  opacity: 0.24;
+  border-radius: 50%;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.banner_slide_pg button.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #837fff;
+}

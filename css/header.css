@@ -30,6 +30,10 @@
   display: flex;
   gap: 24px;
 }
+.header_horizontal_menu a:hover {
+  color: #837fff;
+  text-decoration: underline;
+}
 .noti {
   display: inline-block;
   width: 6px;
