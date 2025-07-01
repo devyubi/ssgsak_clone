@@ -1,29 +1,45 @@
+:root {
+  --banner-max-width: 640px;
+  --slide-max-height: 320px;
+  --border-radius: 16px;
+  --arrow-size: 48px;
+  --arrow-icon-size: 20px;
+  --arrow-radius: 24px;
+  --pagination-size: 6px;
+  --pagination-gap: 2.5px;
+  --banner-padding-mobile: 20px;
+  --arrow-size-mobile: 30px;
+  --arrow-icon-size-mobile: 16px;
+  --pagination-margin-top: 20px;
+}
+
 /* 전체 배너 영역 */
 .banner {
   width: 100%;
   background-color: #fff;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* 배너 안 레이아웃 */
 .banner_wrap {
   position: relative;
+  width: 80%;
+  max-width: var(--banner-max-width); /* 640px → 변수로 대체 */
+  margin: 0 auto;
 }
 
 /* Swiper 슬라이드 wrapper */
 .sw_banner {
-  width: 100%;
-  overflow: hidden;
-  max-width: 70%;
   overflow: visible;
+  max-width: var(--banner-max-width); /* 640px → 변수로 */
+  max-height: var(--slide-max-height); /* 320px → 변수로 */
+  border-radius: var(--border-radius); /* 16px → 변수로 */
+  display: flex;
 }
 
 /* 개별 슬라이드 */
 .swiper-slide {
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s;
 }
 
 .swiper-slide:hover {
@@ -34,31 +50,34 @@
 .banner_slide_item img {
   display: block;
   width: 100%;
+  /* 이미지 비율 유지를 위한 기본 설정 */
   max-width: 100%;
   height: auto;
-  border-radius: 16px;
+  border-radius: var(--border-radius); /* 16px → 변수로 */
 }
 
 /* 좌우 화살표 버튼 공통 */
 .banner_slide_prev {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #e5e5e5;
-  position: absolute;
   top: 50%;
   left: 0;
   z-index: 100;
-  width: 48px;
-  height: 48px;
+  width: var(--arrow-size); /* 48px → 변수로 */
+  height: var(--arrow-size);
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  transform: translateY(-85%) translateX(930%);
-  border-radius: 24px;
+  border-radius: var(--arrow-radius); /* 24px → 변수로 */
+  transform: translateX(-50%) translateY(-50%);
 }
+
 .banner_slide_prev img {
   transform: rotate(180deg);
 }
+
 .banner_slide_next {
   display: flex;
   align-items: center;
@@ -66,47 +85,48 @@
   border: 1px solid rgb(222, 226, 230);
   position: absolute;
   top: 50%;
-  right: 0px;
+  right: 0;
   z-index: 100;
-  width: 48px;
-  height: 48px;
+  width: var(--arrow-size); /* 48px → 변수로 */
+  height: var(--arrow-size);
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  transform: translateY(-85%) translateX(-930%);
-  border-radius: 24px;
+  border-radius: var(--arrow-radius); /* 24px → 변수로 */
+  transform: translateX(50%) translateY(-50%);
 }
 
 .banner_slide_prev img,
 .banner_slide_next img {
-  width: 20px;
-  height: 20px;
+  width: var(--arrow-icon-size); /* 20px → 변수로 */
+  height: var(--arrow-icon-size);
 }
 
-/* 화살표 위치 */
-.banner_slide_prev {
-  left: -10px;
+.banner_slide_pg .swiper-pagination-bullet {
+  width: var(--pagination-size); /* 6px → 변수로 */
+  height: var(--pagination-size);
+  margin: 0 var(--pagination-gap) !important; /* 2.5px → 변수로 */
 }
 
-.banner_slide_next {
-  right: -10px;
+.banner_slide_pg .swiper-pagination-bullet-active {
+  background-color: #000000;
 }
 
 /* 반응형 조정 */
 @media screen and (max-width: 768px) {
   .banner {
-    padding: 20px 0;
+    padding: var(--banner-padding-mobile) 0; /* 20px → 변수로 */
   }
 
   .banner_slide_prev,
   .banner_slide_next {
-    width: 30px;
-    height: 30px;
+    width: var(--arrow-size-mobile); /* 30px → 변수로 */
+    height: var(--arrow-size-mobile);
   }
 
   .banner_slide_prev img,
   .banner_slide_next img {
-    width: 16px;
-    height: 16px;
+    width: var(--arrow-icon-size-mobile); /* 16px → 변수로 */
+    height: var(--arrow-icon-size-mobile);
   }
 }
 
@@ -114,21 +134,5 @@
 .banner_slide_pg {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-}
-
-.banner_slide_pg button {
-  background-color: #1c1c1c;
-  width: 8px;
-  height: 8px;
-  opacity: 0.24;
-  border-radius: 50%;
-  transition: all 0.3s;
-  border: none;
-  cursor: pointer;
-}
-
-.banner_slide_pg button.swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: black;
+  margin-top: var(--pagination-margin-top); /* 20px → 변수로 */
 }

@@ -72,10 +72,10 @@ window.addEventListener("DOMContentLoaded", () => {
       clickable: true,
     },
     breakpoints: {
-      760: {
-        slidesPerView: 2,
-        spaceBetween: 25,
-      },
+      // 760: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 25,
+      // },
     },
   });
 

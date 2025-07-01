@@ -1,10 +1,15 @@
 .header {
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  height: 4rem;
+  height: 72px;
   border-bottom: 1px solid #e5e7eb;
   margin-bottom: 2.5rem;
-  background-color: #ffffff;
+  background-color: #fff;
+  width: 100%;
+  z-index: 999;
 }
 
 .layout {
@@ -91,4 +96,32 @@
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
+}
+
+/* ===== 1024px 이하 ===== */
+@media screen and (max-width: 1024px) {
+  .menu_button {
+    display: block; /* 햄버거 메뉴 보이기 */
+  }
+
+  .logo img {
+    height: 28px;
+  }
+}
+
+/* ===== 767px 이하 ===== */
+@media screen and (max-width: 767px) {
+  .logo img {
+    height: 24px;
+  }
+}
+
+/* ===== 166px 이하 ===== */
+@media screen and (max-width: 166px) {
+  .logo img {
+    height: 20px;
+  }
+  .menu_button img {
+    height: 20px;
+  }
 }
