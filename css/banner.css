@@ -1,21 +1,7 @@
-:root {
-  --banner-max-width: 640px;
-  --slide-max-height: 320px;
-  --border-radius: 16px;
-  --arrow-size: 48px;
-  --arrow-icon-size: 20px;
-  --arrow-radius: 24px;
-  --pagination-size: 6px;
-  --pagination-gap: 2.5px;
-  --banner-padding-mobile: 20px;
-  --arrow-size-mobile: 30px;
-  --arrow-icon-size-mobile: 16px;
-  --pagination-margin-top: 20px;
-}
-
 /* 전체 배너 영역 */
 .banner {
   width: 100%;
+  margin-top: 85px;
   background-color: #fff;
   position: relative;
   overflow: visible;
@@ -25,16 +11,16 @@
 .banner_wrap {
   position: relative;
   width: 80%;
-  max-width: var(--banner-max-width); /* 640px → 변수로 대체 */
+  max-width: 640px;
   margin: 0 auto;
 }
 
 /* Swiper 슬라이드 wrapper */
 .sw_banner {
   overflow: visible;
-  max-width: var(--banner-max-width); /* 640px → 변수로 */
-  max-height: var(--slide-max-height); /* 320px → 변수로 */
-  border-radius: var(--border-radius); /* 16px → 변수로 */
+  max-width: 640px;
+  max-height: 320px;
+  border-radius: 16px;
   display: flex;
 }
 
@@ -53,7 +39,7 @@
   /* 이미지 비율 유지를 위한 기본 설정 */
   max-width: 100%;
   height: auto;
-  border-radius: var(--border-radius); /* 16px → 변수로 */
+  border-radius: 16px;
 }
 
 /* 좌우 화살표 버튼 공통 */
@@ -66,12 +52,12 @@
   top: 50%;
   left: 0;
   z-index: 100;
-  width: var(--arrow-size); /* 48px → 변수로 */
-  height: var(--arrow-size);
+  width: 48px;
+  height: 48px;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  border-radius: var(--arrow-radius); /* 24px → 변수로 */
-  transform: translateX(-50%) translateY(-50%);
+  border-radius: 24px;
+  transform: translateX(-50%) translateY(-75%);
 }
 
 .banner_slide_prev img {
@@ -87,24 +73,24 @@
   top: 50%;
   right: 0;
   z-index: 100;
-  width: var(--arrow-size); /* 48px → 변수로 */
-  height: var(--arrow-size);
+  width: 48px;
+  height: 48px;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  border-radius: var(--arrow-radius); /* 24px → 변수로 */
-  transform: translateX(50%) translateY(-50%);
+  border-radius: 24px;
+  transform: translateX(50%) translateY(-75%);
 }
 
 .banner_slide_prev img,
 .banner_slide_next img {
-  width: var(--arrow-icon-size); /* 20px → 변수로 */
-  height: var(--arrow-icon-size);
+  width: 20px;
+  height: 20px;
 }
 
 .banner_slide_pg .swiper-pagination-bullet {
-  width: var(--pagination-size); /* 6px → 변수로 */
-  height: var(--pagination-size);
-  margin: 0 var(--pagination-gap) !important; /* 2.5px → 변수로 */
+  width: 7px;
+  height: 7px;
+  margin: 2px !important;
 }
 
 .banner_slide_pg .swiper-pagination-bullet-active {
@@ -114,19 +100,19 @@
 /* 반응형 조정 */
 @media screen and (max-width: 768px) {
   .banner {
-    padding: var(--banner-padding-mobile) 0; /* 20px → 변수로 */
+    padding: 20px;
   }
 
   .banner_slide_prev,
   .banner_slide_next {
-    width: var(--arrow-size-mobile); /* 30px → 변수로 */
-    height: var(--arrow-size-mobile);
+    width: 30px;
+    height: 30px;
   }
 
   .banner_slide_prev img,
   .banner_slide_next img {
-    width: var(--arrow-icon-size-mobile); /* 16px → 변수로 */
-    height: var(--arrow-icon-size-mobile);
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -134,5 +120,6 @@
 .banner_slide_pg {
   display: flex;
   justify-content: center;
-  margin-top: var(--pagination-margin-top); /* 20px → 변수로 */
+  margin-top: 20px;
+
 }
