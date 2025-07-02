@@ -3,27 +3,27 @@
   width: 100%;
   background-color: #fff;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* 배너 안 레이아웃 */
 .banner_wrap {
   position: relative;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 /* Swiper 슬라이드 wrapper */
 .sw_banner {
-  width: 100%;
-  overflow: hidden;
-  max-width: 70%;
   overflow: visible;
+  max-width: 640px;
+  max-height: 320px;
+  border-radius: 16px;
+  display: flex;
 }
 
 /* 개별 슬라이드 */
 .swiper-slide {
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s;
 }
 
 .swiper-slide:hover {
@@ -41,11 +41,11 @@
 
 /* 좌우 화살표 버튼 공통 */
 .banner_slide_prev {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #e5e5e5;
-  position: absolute;
   top: 50%;
   left: 0;
   z-index: 100;
@@ -53,8 +53,8 @@
   height: 48px;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  transform: translateY(-85%) translateX(930%);
   border-radius: 24px;
+  transform: translateX(-50%) translateY(-50%);
 }
 .banner_slide_prev img {
   transform: rotate(180deg);
@@ -72,8 +72,8 @@
   height: 48px;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  transform: translateY(-85%) translateX(-930%);
   border-radius: 24px;
+  transform: translateX(50%) translateY(-50%);
 }
 
 .banner_slide_prev img,
@@ -82,14 +82,25 @@
   height: 20px;
 }
 
+.banner_slide_pg .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  margin: 0 2.5px !important;
+}
+/* 포커스 된 버튼의 모양 css */
+.banner_slide_pg .swiper-pagination-bullet-active {
+  background-color: #000000;
+}
+
+
 /* 화살표 위치 */
-.banner_slide_prev {
+/* .banner_slide_prev {
   left: -10px;
 }
 
 .banner_slide_next {
   right: -10px;
-}
+} */
 
 /* 반응형 조정 */
 @media screen and (max-width: 768px) {
@@ -117,7 +128,7 @@
   margin-top: 20px;
 }
 
-.banner_slide_pg button {
+/* .banner_slide_pg button {
   background-color: #1c1c1c;
   width: 8px;
   height: 8px;
@@ -126,9 +137,9 @@
   transition: all 0.3s;
   border: none;
   cursor: pointer;
-}
+} */
 
-.banner_slide_pg button.swiper-pagination-bullet-active {
+/* .banner_slide_pg button.swiper-pagination-bullet-active {
   opacity: 1;
   background-color: black;
-}
+} */

@@ -71,12 +71,12 @@ window.addEventListener("DOMContentLoaded", () => {
       el: ".banner_slide_pg",
       clickable: true,
     },
-    breakpoints: {
-      760: {
-        slidesPerView: 2,
-        spaceBetween: 25,
-      },
-    },
+    // breakpoints: {
+    //   760: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 25,
+    //   },
+    // },
   });
 
   // 마우스 hover 시 자동재생 멈춤/재시작
