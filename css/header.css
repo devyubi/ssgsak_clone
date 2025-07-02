@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
@@ -12,26 +17,18 @@
   z-index: 999;
 }
 
-.layout {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-.header_top {
-  display: flex;
-}
-.header_top_inner {
+.header .layout {
+  position: relative;
+  max-width: 1024px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
 }
 .header_top_left {
   display: flex;
   align-items: center;
-  gap: 32px;
-  margin-left: 22%;
+  gap: 12px;
 }
+
 .logo {
   height: 24px;
 }
@@ -59,11 +56,11 @@
   font-size: 17px;
   text-decoration: none;
 }
+
 .header_top_right {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-right: 22%;
 }
 .skyblue_icon {
   display: flex;

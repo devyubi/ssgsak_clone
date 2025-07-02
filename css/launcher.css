@@ -1,0 +1,30 @@
+.launcher {
+  margin: 55px 0 56px;
+  background-color: aqua;
+}
+.layout {
+}
+.launcher_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 64px;
+}
+.launcher_wrap li {
+  background-color: rgb(247 247 247 / var(--tw-bg-opacity, 1));
+  padding: 10px 20px 0;
+  border-radius: 20px;
+  border: 0 solid #e5e7eb;
+}
+.launcher_icon {
+}
+.launcher_icon img {
+  width: 80px;
+  height: 80px;
+}
+.launcher_icon_txt {
+  color: #444;
+}
+.launcher_hot {
+}
