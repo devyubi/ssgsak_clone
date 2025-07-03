@@ -81,10 +81,16 @@
   transform: translateX(50%) translateY(-75%);
 }
 
+
+  /* 실제 사이트 <svg width="24" height="24" viewBox="0 0 24 24" 
+  fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9.07107 4.92893L16.1421 12L9.07107 19.0711" 
+  stroke-width="2"></path></svg> */
 .banner_slide_prev img,
 .banner_slide_next img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
 }
 
 .banner_slide_pg .swiper-pagination-bullet {
@@ -121,5 +127,4 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-
 }

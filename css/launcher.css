@@ -1,0 +1,39 @@
+.launcher {
+  position: relative;
+  width: 100%;
+}
+.launcher .layout {
+    background-color: beige;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 56px;
+}
+.launcher_wrap {
+    margin: 55px 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px 0;
+}
+.launcher_icon {
+  background-color: #f7f7f7;
+  padding: 16px;
+  min-width: 100%;
+}
+.launcher_icon img {
+  background-color: red;
+}
+.launcher_hot {
+}
+.launcher_icon_txt {
+  text-align: center;
+}
+
+/* 반응형 */
+@media screen and (max-width:1280px){
+    
+}
+@media screen and (min-width:768px){
+    
+}

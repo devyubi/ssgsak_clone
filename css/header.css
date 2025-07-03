@@ -2,7 +2,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  max-width: 100%;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
@@ -29,7 +29,7 @@
 .header_top_left {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 48px;
 }
 
 .logo {
@@ -51,11 +51,33 @@
   display: flex;
   gap: 30px;
 }
-.header_horizontal_menu a:hover {
-  color: #837fff;
+
+/* 기본색상 검정색 */
+.header_horizontal_menu a {
+  color: #1c1c1c;
+  text-decoration: none;
+  /* 글자 간격 좁히기 */
+  letter-spacing: -0.17px;
+}
+
+/* 마우스 갖다대면 전체 회색 처리 */
+.header_horizontal_menu:hover a {
+  color: gray;
   /* 마우스 갖다대면 색 바뀜 */
   text-decoration: dashed;
 }
+
+/* 마우스 올린 그 항목만 다시 검정색 */
+.header_horizontal_menu a:hover {
+  color: #1c1c1c;
+  text-decoration: dashed;
+}
+
+/* 이렇게도 쓸 수 있음. */
+/* .header_horizontal_menu:hover a:not(:hover) {
+  color: gray;
+} */
+
 .noti {
   display: inline-block;
   width: 5px;
@@ -64,6 +86,7 @@
   border-radius: 50%;
   position: absolute;
   right: -7px;
+  line-height: 130%;
 }
 .header_horizontal_menu a {
   position: relative;
@@ -71,6 +94,7 @@
   color: #222;
   font-size: 17px;
   text-decoration: none;
+  display: block;
 }
 
 .header_top_right {
@@ -87,8 +111,7 @@
   border-radius: 20px;
   color: #777;
 }
-.skyblue_icon img {
-}
+
 .blue_icon {
   display: flex;
   align-items: center;
@@ -98,8 +121,7 @@
   border-radius: 20px;
   color: #777;
 }
-.blue_icon img {
-}
+
 .login_bt {
   background-color: rgb(131 127 255);
   border: none;
@@ -124,31 +146,35 @@
     justify-content: flex-start;
     align-items: center;
   }
-  .header_horizontal_menu{
+  .header_horizontal_menu {
     height: 24px;
-    line-height: 1;
-    font-size: 1px;
+    line-height: auto;
+    font-size: 17px;
   }
-
-
-
 
   .menu_button img {
     display: none;
   }
 }
 
-/* 767px 이하 */
-@media screen and (max-width: 767px) {
+/* 768px 이하 */
+@media screen and (max-width: 768px) {
+  .header {
+    /* 0.15초에 걸쳐 변화 일어남 */
+    transition-duration: 0.15s;
+  }
   .logo img {
     height: 24px;
   }
-  .menu_button img {
+  .menu_button {
     height: 24px;
     justify-content: flex-end;
   }
-  .header_horizontal_menu {
-    display: none; 
+  .header_horizontal_menu a {
+    /* 글자 없애기 */
+    fill: none;
+    transition-duration: 0.15s;
+    display: none;
   }
   .header_top_right {
     display: none;
@@ -160,6 +186,7 @@
   .logo img,
   .menu_button img {
     height: 20px;
+    justify-content: space-between;
   }
   .header_horizontal_menu {
     display: none;
@@ -168,3 +195,6 @@
     display: none;
   }
 }
+
+/* 왜 1024 일 때, 글씨가 옆으로 갈까 ? */
+/* 왜 768일 때, 이미지가 작아지는가 ? */
