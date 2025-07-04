@@ -29,7 +29,7 @@
 .header_top_left {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 46px;
 }
 
 .logo {
@@ -45,6 +45,7 @@
 }
 .menu_button img {
   height: 24px;
+  display: none;
 }
 
 .header_horizontal_menu {
@@ -137,6 +138,9 @@
 
 /* 반응형 - 1024px 이상 */
 @media screen and (max-width: 1024px) {
+  .header_top {
+    align-items: center;
+  }
   .menu_button {
     display: block;
   }
@@ -157,18 +161,29 @@
   }
 }
 
-/* 768px 이하 */
-@media screen and (max-width: 768px) {
+/* 767px 이하 */
+@media screen and (max-width: 767px) {
   .header {
+    margin-bottom: 0px !important;
+    height: 54px; /* 기존 72px보다 더 작게 */
+    padding: 0 10px; /* 좌우 여백도 줄임 */
+    border-bottom: none;
     /* 0.15초에 걸쳐 변화 일어남 */
     transition-duration: 0.15s;
   }
   .logo img {
-    height: 24px;
+    height: 28px;
+    width: 77px;
   }
   .menu_button {
     height: 24px;
-    justify-content: flex-end;
+    display: flex;
+    margin-top: -12px; /* 음수값으로 맞추기 */
+  }
+  .menu_button img {
+    height: 38px; /* 기존 24px보다 크게 */
+    width: 100%; /* 비율 유지되게끔 해줌 */
+    display: block; /* 767px 이하만 보이고, 그 이상은 안보임 */
   }
   .header_horizontal_menu a {
     /* 글자 없애기 */
@@ -195,6 +210,3 @@
     display: none;
   }
 }
-
-/* 왜 1024 일 때, 글씨가 옆으로 갈까 ? */
-/* 왜 768일 때, 이미지가 작아지는가 ? */
