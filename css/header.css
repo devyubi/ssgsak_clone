@@ -142,7 +142,7 @@
     align-items: center;
   }
   .menu_button {
-    display: block;
+    /* display: block; */
   }
   .logo img {
     height: 32px;
@@ -178,13 +178,17 @@
   .menu_button {
     height: 24px;
     display: flex;
+<<<<<<< HEAD
     margin-top: -12px; /* 음수값으로 맞추기 */
   }
   .menu_button img {
     height: 38px; /* 기존 24px보다 크게 */
     width: 100%; /* 비율 유지되게끔 해줌 */
     display: block; /* 767px 이하만 보이고, 그 이상은 안보임 */
+=======
+>>>>>>> b0c81e075e1e5cf42cb235740ee9eeddfb52459c
   }
+  .menu_button img {}
   .header_horizontal_menu a {
     /* 글자 없애기 */
     fill: none;
