@@ -1,37 +1,93 @@
 .launcher {
-  position: relative;
   width: 100%;
 }
 .launcher .layout {
-  background-color: beige;
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 10px;
   margin-bottom: 56px;
 }
 .launcher_wrap {
-  margin: 55px 0 56px;
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  margin: 55px 0 56px;
   padding: 10px 20px 0;
+  gap: 64px;
 }
 .launcher_icon {
+  position: relative; /* 얘가 부모임. */
+  cursor: pointer;
+  width: 80px;
+  height: 100%;
+  outline: none; /* 포커스됐을 때 생기는 외곽선 제거 */
+  border: none; /* 기본 테두리 선 제거 */
+  box-sizing: border-box;
   background-color: #f7f7f7;
   padding: 16px;
-  min-width: 100%;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center;
+  justify-content: center;
 }
 .launcher_icon img {
-  background-color: red;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
 }
 .launcher_hot {
+  position: absolute; /* 부모 launcher_icon을 기준으로 배치 */
+  top: -10px; /* 위로 약간 올라가게 */
+  right: 22px; /* 오른쪽 바깥으로 약간 나가게 */
+  background-color: #ff5247;
+  color: #fff;
+  padding: 3.5px 5px 4px; /* 안쪽 여백 */
+  font-size: 12px;
+  font-weight: bolder; /* 글씨 bold 보다 두껍게 */
+  border-radius: 10px;
+  z-index: 999;
+  line-height: 1; /* 줄간격 좁게 */
+  white-space: nowrap; /* 줄 한줄로 나열 */
 }
 .launcher_icon_txt {
+  position: absolute;
   text-align: center;
+  justify-content: center;
+  white-space: nowrap; /* 줄 한줄로 나열 */
+  font-size: 17px;
+  color: #444;
+  /* 글자 간격 좁히기 */
+  letter-spacing: -0.17px;
+  margin-top: 130px;
+  font-weight: 450;
 }
 
 /* 반응형 */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 767px) {
+  .launcher_icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .launcher_hot {
+    top: -8px;
+    right: 22px;
+    font-size: 12px;
+    padding: 3px 5px;
+  }
+
+  .launcher_icon_txt {
+    margin-top: 100px;
+    font-size: 15px;
+    font-weight: 450;
+  }
 }
-@media screen and (min-width: 767px) {
+
+@media screen and(max-width:710px) {
+  .launcher_icon img {
+    width: 30px;
+    height: 10px;
+  }
 }
