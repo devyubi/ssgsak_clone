@@ -141,9 +141,7 @@
   .header_top {
     align-items: center;
   }
-  .menu_button {
-    /* display: block; */
-  }
+
   .logo img {
     height: 32px;
     display: flex;
@@ -178,7 +176,7 @@
   .menu_button {
     height: 24px;
     display: flex;
-    margin-top: -12px; /* 음수값으로 맞추기 */
+    margin-top: -12px; /* 음수값으로 맞추면 좁아짐 */
   }
   .menu_button img {
     height: 38px; /* 기존 24px보다 크게 */
