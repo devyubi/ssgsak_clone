@@ -74,11 +74,8 @@
 @media screen and (max-width: 767px) {
   .launcher_wrap {
     width: 100%; /* 화면에 가득 차게 */
-    padding: 10px 10px 0; /* 좌우 여백만 살짝 조정 (원래 20px → 10px) */
+    padding: 0px 10px 0; /* 좌우 여백만 살짝 조정 */
     gap: 64px; /* gap 줄이지 않음, 그대로 유지 */
-  }
-
-  .launcher_icon {
   }
 
   .launcher_icon img {
@@ -87,7 +84,7 @@
   }
 
   .launcher_icon_txt {
-    margin-top: 90px;
+    margin-top: 110px;
     font-size: 16px;
   }
 

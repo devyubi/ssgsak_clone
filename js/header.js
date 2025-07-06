@@ -7,6 +7,10 @@ window.addEventListener("DOMContentLoaded", () => {
   const loginBtn = document.querySelector(".login_bt");
   const skyblueIcon = document.querySelector(".skyblue_icon");
   const blueIcon = document.querySelector(".blue_icon");
+  // 모바일 햄버거 버튼
+  // const menuBtn = document.querySelector(".menu_button");
+  // const mobileMenu = document.querySelector(".mobile_menu");
+  // const closeBtn = document.querySelector(".close_button");
   // 브라우저에 스크롤이 발생시 실행
   window.addEventListener("scroll", () => {
     // 현재 스크롤 위치 (위로부터 몇 px 내렸는지 확인)
@@ -29,5 +33,15 @@ window.addEventListener("DOMContentLoaded", () => {
       skyblueIcon.classList.remove("icon_hide");
       blueIcon.classList.remove("icon_hide");
     }
+
+    //햄버거 메뉴 열기
+    // menuBtn.addEventListener("click", function () {
+    //   mobileMenu.classList.add("active");
+    // });
+
+    // 햄버거 메뉴 닫기
+    // closeBtn.addEventListener("click", function () {
+    //   mobileMenu.classList.remove("active");
+    // });
   });
 });
