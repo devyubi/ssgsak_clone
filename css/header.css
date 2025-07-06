@@ -5,6 +5,7 @@
   max-width: 100%;
   justify-content: space-between;
   align-items: center;
+  /* 애니메이션 효과 */
   transition: all 0.3s ease;
   display: flex;
   height: 72px;

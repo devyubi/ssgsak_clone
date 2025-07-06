@@ -1,5 +1,6 @@
 .launcher {
   width: 100%;
+  padding-bottom: 40px;
 }
 .launcher .layout {
   padding-left: 20px;
@@ -27,7 +28,7 @@
   padding: 16px;
   border-radius: 28px;
   display: flex;
-  flex-direction: column; /* 세로 정렬 */
+  flex-direction: column; /* 한줄로 (세로) 정렬 */
   align-items: center;
   justify-content: center;
 }
@@ -55,13 +56,13 @@
   border-radius: 10px;
   z-index: 999;
   line-height: 1; /* 줄간격 좁게 */
-  white-space: nowrap; /* 줄 한줄로 나열 */
+  white-space: nowrap; /* 줄 (가로로) 한줄로 나열 */
 }
 .launcher_icon_txt {
   position: absolute;
   text-align: center;
   justify-content: center;
-  white-space: nowrap; /* 줄 한줄로 나열 */
+  white-space: nowrap;
   font-size: 17px;
   color: #444;
   /* 글자 간격 좁히기 */

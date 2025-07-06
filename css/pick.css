@@ -1,0 +1,126 @@
+.pick {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7ff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 60px 0; /* 위아래 여백 추가 */
+}
+.pick .layout {
+  /* 가운데 정렬하려면 layout에 너비 제한 줘야함 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pick_wrap {
+}
+.ssgsag_pick {
+  margin-bottom: 20px;
+  color: #1c1c1c;
+  font-size: 24px;
+  margin-left: 40px;
+  /* 글씨 굵게 */
+  font-weight: 600;
+}
+
+.annc {
+  display: flex;
+}
+
+.pick_wrap p span {
+  color: #5a64f9;
+  font-size: 24px;
+  font-weight: 600;
+}
+.annc p {
+  padding-top: 3px;
+  font-size: 15px;
+  color: #444;
+}
+.contest li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* 한줄로 세로 정렬 */
+  width: 200px;
+}
+.contest img {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  width: 100%;
+  height: 100%;
+}
+.internship li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* 한줄로 세로 정렬 */
+  width: 200px;
+}
+.internship {
+  align-items: center;
+  justify-content: center;
+}
+.internship img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.education {
+  align-items: center;
+  justify-content: center;
+}
+.education li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* 한줄로 세로 정렬 */
+  width: 200px;
+}
+.education img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.pick_blue {
+  margin-top: 4px; /* 이미지와 태그 사이 간격 */
+  color: #346df3;
+  background-color: #eff3fe;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.pick_option {
+  padding: 5px 0;
+}
+.pick_red {
+  margin-top: 4px;
+  color: #fe6d6d;
+  background-color: #fff3f3;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.pick_gray {
+  margin-top: 4px;
+  color: #777;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  font-size: 11px;
+}
+.pick_yellow {
+  margin-top: 4px;
+  color: #fd8f4c;
+  background-color: #fff6f1;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.pick_txt {
+  /* 텍스트가 긴 경우 두줄만 보이게 함 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 1줄 보이게 하고싶으면 clamp : 1로 바꾸면 된다 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
