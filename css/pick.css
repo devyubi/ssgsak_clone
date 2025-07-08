@@ -44,12 +44,7 @@
   flex-direction: column; /* 한줄로 세로 정렬 */
   width: 200px;
 }
-.contest img {
-  border-radius: 10px;
-  border: 1px solid #eee;
-  width: 100%;
-  height: 100%;
-}
+
 .internship li {
   cursor: pointer;
   display: flex;
@@ -60,11 +55,7 @@
   align-items: center;
   justify-content: center;
 }
-.internship img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-}
+
 .education {
   align-items: center;
   justify-content: center;
@@ -75,11 +66,7 @@
   flex-direction: column; /* 한줄로 세로 정렬 */
   width: 200px;
 }
-.education img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-}
+
 .pick_blue {
   margin-top: 4px; /* 이미지와 태그 사이 간격 */
   color: #346df3;
@@ -91,6 +78,40 @@
 .pick_option {
   padding: 5px 0;
 }
+/* 이미지 */
+.contest img,
+.internship img,
+.education img {
+  width: 100%;
+  height: 100%;
+  /* 비율 유지하며 화면 채우기 */
+  object-fit: cover;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  width: 225px;
+  height: 225px;
+  object-fit: cover; /* 이미지 비율 유지하며 꽉 채우기 */
+  transition: transform 0.3s ease; /* 부드러운 확대 효과 */
+}
+/* 이미지 확대 효과 */
+.contest img:hover,
+.internship img:hover,
+.education img:hover {
+  transform: scale(1.05); /* 5% 만 확대 */
+}
+
+/* 이미지 확대 효과 */
+.contest li,
+.internship li,
+.education li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 225px; /* 박스 넓이 이미지랑 맞춤 */
+  overflow: hidden; /* 이미지가 넘쳐도 안 보이게 */
+  border-radius: 10px; /* 이미지 둥글게 → 부모에도 줘야 깔끔 */
+}
+
 .pick_red {
   margin-top: 4px;
   color: #fe6d6d;
