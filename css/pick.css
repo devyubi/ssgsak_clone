@@ -10,8 +10,9 @@
 }
 .pick .layout {
   /* 가운데 정렬하려면 layout에 너비 제한 줘야함 */
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 56px 16px;
 }
 .pick_wrap {
 }
@@ -19,7 +20,7 @@
   margin-bottom: 20px;
   color: #1c1c1c;
   font-size: 24px;
-  margin-left: 40px;
+  /* margin-left: 40px; */
   /* 글씨 굵게 */
   font-weight: 600;
 }
@@ -27,44 +28,65 @@
 .annc {
   display: flex;
 }
-
-.pick_wrap p span {
-  color: #5a64f9;
-  font-size: 24px;
-  font-weight: 600;
+.annc_list {
+  display: flex;
+  gap: 10px;
 }
-.annc p {
+.annc_list li {
+  width: 25%; /* 박스 넓이 이미지랑 맞춤 */
+  padding: 12px 8px;
+  cursor: pointer;
+  overflow: hidden; /* 이미지가 넘쳐도 안 보이게 */
+  border-radius: 10px; /* 이미지 둥글게 → 부모에도 줘야 깔끔 */
+  cursor: pointer;
+}
+
+.annc_list li:hover {
+  border-radius: 10px;
+  background-color: #f0f1f6;
+}
+
+.pick_img {
+  width: 100%;
+  height: 225px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* 이미지 */
+.pick_img img {
+  width: 100%;
+  height: 100%;
+  /* 비율 유지하며 화면 채우기 */
+  object-fit: cover; /* 이미지 비율 유지하며 꽉 채우기 */
+  transition: transform 0.3s ease; /* 부드러운 확대 효과 */
+}
+/* 이미지 확대 효과 */
+.pick_img img:hover {
+  transform: scale(1.05); /* 5% 만 확대 */
+}
+
+.pick_option {
+  padding: 5px 0;
   padding-top: 3px;
   font-size: 15px;
   color: #444;
 }
-.contest li {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column; /* 한줄로 세로 정렬 */
-  width: 200px;
+
+.pick_txt {
+  /* 텍스트가 긴 경우 두줄만 보이게 함 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 1줄 보이게 하고싶으면 clamp : 1로 바꾸면 된다 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 
-.internship li {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column; /* 한줄로 세로 정렬 */
-  width: 200px;
-}
-.internship {
-  align-items: center;
-  justify-content: center;
-}
-
-.education {
-  align-items: center;
-  justify-content: center;
-}
-.education li {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column; /* 한줄로 세로 정렬 */
-  width: 200px;
+.pick_txt strong {
+  font-size: 17px;
+  color: #1c1c1c;
 }
 
 .pick_blue {
@@ -74,42 +96,6 @@
   padding: 5px;
   border-radius: 4px;
   font-size: 11px;
-}
-.pick_option {
-  padding: 5px 0;
-}
-/* 이미지 */
-.contest img,
-.internship img,
-.education img {
-  width: 100%;
-  height: 100%;
-  /* 비율 유지하며 화면 채우기 */
-  object-fit: cover;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  width: 225px;
-  height: 225px;
-  object-fit: cover; /* 이미지 비율 유지하며 꽉 채우기 */
-  transition: transform 0.3s ease; /* 부드러운 확대 효과 */
-}
-/* 이미지 확대 효과 */
-.contest img:hover,
-.internship img:hover,
-.education img:hover {
-  transform: scale(1.05); /* 5% 만 확대 */
-}
-
-/* 이미지 확대 효과 */
-.contest li,
-.internship li,
-.education li {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  width: 225px; /* 박스 넓이 이미지랑 맞춤 */
-  overflow: hidden; /* 이미지가 넘쳐도 안 보이게 */
-  border-radius: 10px; /* 이미지 둥글게 → 부모에도 줘야 깔끔 */
 }
 
 .pick_red {
@@ -133,15 +119,4 @@
   padding: 5px;
   border-radius: 4px;
   font-size: 11px;
-}
-
-.pick_txt {
-  /* 텍스트가 긴 경우 두줄만 보이게 함 */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  /* 1줄 보이게 하고싶으면 clamp : 1로 바꾸면 된다 */
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-break: break-all;
 }

@@ -1,0 +1,101 @@
+.hot {
+  border-bottom: 1px solid #eee;
+}
+.hot .layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 16px;
+}
+.hot_bg {
+}
+.hot_title {
+  padding-top: 56px;
+  padding-left: 16px;
+  padding-right: 16px;
+  gap: 24px;
+}
+.hot_title p {
+  font-size: 24px;
+  font-weight: 600;
+}
+.hot_title span {
+  color: #5a64f9;
+}
+.hot_column {
+  display: grid;
+  /* 2줄씩 1줄로 배치 */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.hot_wrap {
+  justify-content: center;
+  gap: 40px; /* 열 사이 간격 */
+  margin-top: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.hot_li {
+  width: 100%; /* 카드 너비 */
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.hot_li:hover .hot_image img {
+  transform: scale(1.05);
+}
+.hot_annc_image {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
+  text-decoration: none;
+}
+.hot_annc_image:hover {
+  background-color: #f0f1f6;
+}
+.hot_image {
+  flex-shrink: 0;
+  width: 102px;
+  overflow: hidden;
+  height: 102px;
+  border-radius: 15px;
+}
+.hot_image img {
+  transition: all 0.5s;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hot_annc_info {
+  height: 100px;
+  flex: 1;
+  max-width: 423px;
+}
+.option_purple {
+  display: inline-block;
+  color: #5f26cd;
+  background-color: #f2eef8;
+  padding: 0px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.option_blue {
+  display: inline-block;
+  color: #346df3;
+  background-color: #eff3fe;
+  padding: 0px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.hot_annc_text {
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.hot_day {
+  color: #1c1c1c;
+  font-size: 17px;
+}
