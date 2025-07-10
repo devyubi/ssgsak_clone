@@ -91,10 +91,17 @@
 }
 .hot_annc_text {
   color: #444;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  /* 말줄임 */
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 1줄로 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 넘치는 텍스트 말줄임표 처리 */
 }
+
 .hot_day {
   color: #1c1c1c;
   font-size: 17px;
