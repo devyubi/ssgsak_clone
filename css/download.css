@@ -1,0 +1,45 @@
+.download {
+  background-color: rgba(240, 241, 246, 1);
+  border-bottom: 1px solid #eee;
+}
+.download .layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 16px;
+}
+.download_wrap {
+  background-color: #fff;
+  display: flex;
+  border-radius: 20px;
+}
+.guide_title {
+  padding-bottom: 32px;
+  padding-left: 8px;
+}
+.guide_img {
+  max-width: 360px;
+  max-height: 240px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* 잘리는 거 방지 */
+  border-radius: 10px;
+  overflow: hidden;
+}
+.download_guide {
+  display: grid; /* 새로 정렬 */
+}
+.download_guide p {
+}
+.download_guide span {
+}
+.app_guide img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: inline-block;
+  margin-right: 4px; /* 텍스트랑 붙지 않게 */
+  vertical-align: middle; /* 텍스트랑 수직 정렬 */
+}
+.app_guide span {
+}
