@@ -1,0 +1,113 @@
+.just {
+  border-bottom: 1px solid #eee;
+}
+.just .layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 16px;
+}
+.just_wrap {
+}
+.just_title {
+  padding-bottom: 32px;
+  padding-left: 8px;
+}
+.just_title p {
+  font-size: 24px;
+  font-weight: 600;
+}
+.just_title span {
+  color: #5a64f9;
+}
+.just_list {
+  display: grid; /* 바둑판처럼 나누기 */
+  /* 4장씩 1줄로 배치 */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+.just_list li {
+  width: 100%; /* 카드 너비 */
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden; /* 넘치지 않게 */
+}
+.just_list li:hover .just_img img {
+  transform: scale(1.05);
+}
+.just_img {
+  display: flex;
+  gap: 8px;
+  padding: 8px 8px 12px;
+  align-items: center;
+  flex-direction: column; /* 세로 방향으로 배치 */
+  align-items: flex-start; /* 텍스트 왼쪽 정렬 */
+}
+.just_img:hover {
+  background-color: #f0f1f6;
+}
+.just_img img {
+  transition: all 0.5s;
+  width: 224px;
+  height: 224px;
+  border-radius: 15px;
+  object-fit: cover;
+  overflow: hidden; /*박스 테두리 밖으로 튀어나오지않게*/
+  border: 1px solid #eee;
+}
+.just_red {
+  margin-right: 4px;
+  margin-top: 4px;
+  color: #fe6d6d;
+  background-color: #fff3f3;
+  border-radius: 4px;
+  font-size: 11px;
+  padding: 5px;
+}
+.just_yellow {
+  margin-top: 4px;
+  color: #fd8f4c;
+  background-color: #fff6f1;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.just_blue {
+  display: inline-block;
+  color: #346df3;
+  background-color: #eff3fe;
+  padding: 0px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.just_gray {
+  margin-top: 4px;
+  color: #777;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  font-size: 11px;
+  padding: 5px;
+}
+.just_purple {
+  display: inline-block;
+  color: #5f26cd;
+  background-color: #f2eef8;
+  padding: 0px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.just_txt {
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  /* 말줄임 */
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 1줄로 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 넘치는 텍스트 말줄임표 처리 */
+}
+.just_day {
+  padding-top: 10px;
+  color: #1c1c1c;
+  font-size: 17px;
+}

@@ -6,8 +6,7 @@
   margin: 0 auto;
   padding: 56px 16px;
 }
-.hot_bg {
-}
+
 .hot_title {
   padding-top: 56px;
   padding-left: 16px;
@@ -23,7 +22,7 @@
 }
 .hot_column {
   display: grid;
-  /* 2줄씩 1줄로 배치 */
+  /* 2장씩 1줄로 배치 */
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
@@ -50,12 +49,14 @@
   gap: 16px;
   padding: 16px;
   align-items: center;
+  /* a 태그 밑줄 없애기 */
   text-decoration: none;
 }
 .hot_annc_image:hover {
   background-color: #f0f1f6;
 }
 .hot_image {
+  /* 이미지 줄어들지않게 */
   flex-shrink: 0;
   width: 102px;
   overflow: hidden;
