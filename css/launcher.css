@@ -1,0 +1,188 @@
+.launcher {
+  width: 100%;
+  padding-bottom: 40px;
+}
+.launcher .layout {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 56px;
+}
+.launcher_wrap {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 55px 0 56px;
+  padding: 10px 20px 0;
+  gap: 64px;
+}
+.launcher_icon {
+  position: relative; /* 얘가 부모임. */
+  cursor: pointer;
+  width: 80px;
+  height: 100%;
+  outline: none; /* 포커스됐을 때 생기는 외곽선 제거 */
+  border: none; /* 기본 테두리 선 제거 */
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  padding: 16px;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column; /* 한줄로 (세로) 정렬 */
+  align-items: center;
+  justify-content: center;
+}
+.launcher_icon img {
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.launcher_icon:hover {
+  background-color: #f0f1f6;
+  border-radius: 28px;
+}
+
+.launcher_hot {
+  position: absolute; /* 부모 launcher_icon을 기준으로 배치 */
+  top: -10px; /* 위로 약간 올라가게 */
+  right: 22px; /* 오른쪽 바깥으로 약간 나가게 */
+  background-color: #ff5247;
+  color: #fff;
+  padding: 3.5px 5px 4px; /* 안쪽 여백 */
+  font-size: 12px;
+  font-weight: bolder; /* 글씨 bold 보다 두껍게 */
+  border-radius: 10px;
+  z-index: 999;
+  line-height: 1; /* 줄간격 좁게 */
+  white-space: nowrap; /* 줄 (가로로) 한줄로 나열 */
+}
+.launcher_icon_txt {
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 17px;
+  color: #444;
+  /* 글자 간격 좁히기 */
+  letter-spacing: -0.17px;
+  margin-top: 130px;
+  font-weight: 450;
+}
+
+/* 반응형 */
+@media screen and (max-width: 767px) {
+  .launcher_wrap {
+    width: 100%; /* 화면에 가득 차게 */
+    padding: 0px 10px 0; /* 좌우 여백만 살짝 조정 */
+    gap: 64px; /* gap 줄이지 않음, 그대로 유지 */
+  }
+
+  .launcher_icon img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .launcher_icon_txt {
+    margin-top: 110px;
+    font-size: 16px;
+  }
+
+  .launcher_hot {
+    top: -6px;
+    right: 18px;
+    font-size: 11px;
+    padding: 2.5px 4px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .launcher_wrap {
+    width: 100%; /* 화면에 가득 */
+    flex-wrap: wrap;
+    gap: 24px; /* 아이콘 사이 간격만 줄임 */
+    margin: 30px 0 40px; /* 위아래 여백 줄임 */
+    padding: 10px 10px 0; /* 좌우 여백도 줄임 */
+  }
+
+  .launcher_icon_txt {
+    margin-top: 110px;
+    font-size: 14px;
+  }
+
+  .launcher_hot {
+    top: -6px;
+    right: 18px;
+    font-size: 11px;
+    padding: 2.5px 4px;
+  }
+}
+
+@media screen and (max-width: 451px) {
+  .launcher_wrap {
+    flex-wrap: nowrap; /* 줄바꿈 금지 */
+    overflow-x: auto; /* 넘치면 가로 스크롤 허용 */
+    gap: 16px; /* 간격 좁힘 */
+    margin: -10px 0 10px;
+    padding: 10px;
+    width: 100%;
+    height: 110px;
+  }
+
+  .launcher_icon {
+    width: 70px;
+    padding: 12px;
+    flex: 0 0 auto; /* 크기 고정, 줄바꿈 방지 */
+  }
+
+  .launcher_icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .launcher_icon_txt {
+    margin-top: 85px;
+    font-size: 13px;
+  }
+
+  .launcher_hot {
+    top: -6px;
+    right: 16px;
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+@media screen and (max-width: 387px) {
+  .launcher_wrap {
+    flex-wrap: nowrap; /* 줄바꿈 금지 */
+    gap: 15px; /* 간격 좁힘 */
+    margin: -15px 0 10px;
+    padding: 10px;
+    width: 100%;
+    height: 110px;
+  }
+
+  .launcher_icon {
+    width: 70px;
+    padding: 12px;
+    flex: 0 0 auto; /* 크기 고정, 줄바꿈 방지 */
+  }
+
+  .launcher_icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .launcher_icon_txt {
+    margin-top: 85px;
+    font-size: 13px;
+  }
+
+  .launcher_hot {
+    top: -6px;
+    right: 16px;
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}

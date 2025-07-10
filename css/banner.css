@@ -1,0 +1,142 @@
+/* 전체 배너 영역 */
+.banner {
+  width: 100%; /* 가로폭을 전체 화면 너비로 설정 */
+  margin-top: 110px;
+  background-color: #fff;
+  position: relative; /* 내부 요소 위치 잡기 위해 상대 위치 설정 */
+  overflow: visible; /* 넘치는 부분도 보이도록 설정 */
+}
+
+/* 배너 안 레이아웃 */
+.banner_wrap {
+  position: relative; /* 내부에서 위치 조정 가능하게 설정 */
+  width: 80%; /* 부모 너비의 80%로 설정 */
+  max-width: 640px; /* 최대 너비는 640px로 제한 */
+  margin: 0 auto; /* 좌우 가운데 정렬 */
+}
+
+/* Swiper 슬라이드 wrapper */
+.sw_banner {
+  overflow: visible; /* 넘치는 부분 보여줌 (슬라이드 그림자 등) */
+  max-width: 640px;
+  max-height: 320px;
+  border-radius: 16px;
+  display: flex; /* 내부 요소를 가로로 정렬 */
+}
+
+.swiper-slide:hover {
+  transform: scale(1.02); /* 2% 확대 효과 */
+}
+
+/* 슬라이드 이미지 */
+.banner_slide_item img {
+  display: block; /* 이미지 주변 여백 제거 (inline 특성 없앰) */
+  width: 100%;
+  /* 이미지 비율 유지를 위한 기본 설정 */
+  max-width: 100%;
+  height: auto; /* 비율 유지하며 자동 높이 */
+  border-radius: 16px;
+}
+
+/* 좌우 화살표 버튼 공통 */
+.banner_slide_prev {
+  position: absolute; /* 부모 기준으로 절대 위치 */
+  display: flex; /* 버튼 내부 가운데 정렬 */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5; /* 연한 회색 테두리 */
+  top: 50%; /* 수직 중앙 기준 위치 */
+  left: 0;
+  z-index: 100; /* 다른 요소보다 위에 표시 */
+  width: 48px;
+  height: 48px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 24px;
+  transform: translateX(-50%) translateY(-75%);
+}
+
+.banner_slide_prev img {
+  transform: rotate(180deg); /* 180deg(도수) = 90도 */
+}
+
+.banner_slide_next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(222, 226, 230);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 24px;
+  transform: translateX(50%) translateY(-75%);
+}
+
+/* 실제 사이트 <svg width="24" height="24" viewBox="0 0 24 24" 
+  fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9.07107 4.92893L16.1421 12L9.07107 19.0711" 
+  stroke-width="2"></path></svg> */
+.banner_slide_prev img,
+.banner_slide_next img {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2; /* 선 굵기 (.SVG용) */
+}
+
+/* 페이지네이션 (pg) 버튼 */
+.banner_slide_pg {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.banner_slide_pg .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin: 2px !important;
+}
+
+.banner_slide_pg .swiper-pagination-bullet-active {
+  background-color: #000;
+}
+
+/* 반응형 조정 */
+@media screen and (max-width: 767px) {
+  .banner {
+    margin-top: 60px;
+  }
+
+  .banner_slide_prev,
+  .banner_slide_next {
+    display: none;
+  }
+}
+
+/* 반응형 pg 버튼 작게하기 */
+
+@media screen and (max-width: 767px) and (min-width: 540px) {
+  .banner_slide_pg .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin-top: -10px;
+  }
+}
+@media screen and (max-width: 539px) and (min-width: 150px) {
+  .banner_slide_pg .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    margin-top: -10px;
+  }
+}
+@media screen and (max-width: 149px) {
+  .banner_slide_pg .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    margin-top: -20px;
+  }
+}
