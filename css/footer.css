@@ -1,0 +1,74 @@
+.footer .layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 16px;
+  color: #1c1c1c;
+}
+.footer_wrap {
+  display: flex;
+}
+.footer_top {
+  width: 494px;
+  height: 104.41px;
+  display: grid; /* 새로 정렬 */
+}
+.customer_service {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.tel {
+}
+.operating {
+}
+.company {
+  width: 237px;
+  height: 151.5px;
+}
+.company strong {
+  color: #1c1c1c;
+}
+.company p {
+  color: #777;
+}
+.business {
+  width: 237px;
+  height: 151.5px;
+}
+.business strong {
+  color: #1c1c1c;
+}
+.business p {
+  color: #777;
+}
+.footer_info {
+  color: #777;
+}
+.footer_info p {
+  font-size: 14px;
+}
+/* 중간 패딩 */
+.line {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+.inquiry {
+  font-size: 14px;
+  display: flex;
+}
+.inquiry p {
+  cursor: pointer;
+}
+.bar {
+}
+.util_poilcy {
+}
+.util {
+}
+.policy {
+}
+.footer_img {
+}
+.footer_img img {
+}
