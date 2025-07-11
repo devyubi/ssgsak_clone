@@ -7,10 +7,17 @@
   margin: 0 auto;
   padding: 56px 16px;
 }
-.download_wrap {
-  background-color: #fff;
+.app_download {
   display: flex;
+  padding: 40px;
+  width: 988px;
+  height: 320px;
+  gap: 56px;
+  background-color: #fff;
   border-radius: 20px;
+}
+.download_wrap {
+  /* 필요없음 */
 }
 .guide_title {
   padding-bottom: 32px;
@@ -28,18 +35,40 @@
 }
 .download_guide {
   display: grid; /* 새로 정렬 */
+  width: 492px;
+  height: 240px;
 }
 .download_guide p {
+  padding-top: 40px;
+  color: #777;
+  justify-content: center;
 }
 .download_guide span {
+  color: #1c1c1c;
+  font-size: 24px;
+  font-weight: 500;
 }
-.app_guide img {
+.app_guide {
+  height: 50px;
+  width: 492px;
+}
+.app_guide_bt {
+  width: 235.59px;
+  height: 50px;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  color: #444;
+}
+.app_guide_img {
   width: 24px;
   height: 24px;
   object-fit: contain;
   display: inline-block;
   margin-right: 4px; /* 텍스트랑 붙지 않게 */
   vertical-align: middle; /* 텍스트랑 수직 정렬 */
-}
-.app_guide span {
 }
