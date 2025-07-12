@@ -10,7 +10,6 @@
 .footer_top {
   width: 494px;
   height: 104.41px;
-  display: grid; /* 새로 정렬 */
 }
 .customer_service {
   font-size: 17px;
@@ -18,10 +17,22 @@
 }
 
 .tel {
+  font-size: 24px;
+  font-weight: 700;
+  color: #444;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .operating {
+  color: #aaa;
+  font-size: 14px;
+  width: 494px;
+  height: 42.41px;
 }
 .company {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 237px;
   height: 151.5px;
 }
@@ -32,6 +43,9 @@
   color: #777;
 }
 .business {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 237px;
   height: 151.5px;
 }
@@ -42,6 +56,7 @@
   color: #777;
 }
 .footer_info {
+  gap: 10px;
   color: #777;
 }
 .footer_info p {
@@ -57,18 +72,23 @@
   font-size: 14px;
   display: flex;
 }
+
 .inquiry p {
   cursor: pointer;
+  margin-left: 5px;
 }
 .bar {
+  margin-right: 5px;
 }
 .util_poilcy {
+  font-size: 14px;
+  color: #777;
+  margin-top: 15px;
 }
-.util {
-}
+
 .policy {
+  gap: 10px;
 }
 .footer_img {
-}
-.footer_img img {
+  margin-top: 15px;
 }
