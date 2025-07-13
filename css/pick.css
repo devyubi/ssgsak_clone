@@ -7,6 +7,7 @@
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding: 60px 0; /* 위아래 여백 추가 */
+  letter-spacing: -0.17px; /* 글자 간격 좁히기*/
 }
 .pick .layout {
   /* 가운데 정렬하려면 layout에 너비 제한 줘야함 */
@@ -71,8 +72,6 @@
 .pick_option {
   padding: 5px 0;
   padding-top: 3px;
-  font-size: 15px;
-  color: #444;
 }
 
 .pick_txt {
@@ -84,6 +83,9 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   word-break: break-all;
+  color: #444;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 .pick_txt strong {
@@ -124,4 +126,44 @@
 }
 
 /* 반응형 */
-@media screen and;
+@media screen and (max-width: 767px) {
+  .pick {
+    padding: 32px 16px;
+  }
+
+  .pick .layout {
+    padding: 0;
+  }
+
+  .annc_list {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .annc_list li {
+    width: calc(50% - 6px); /* 2개씩 맞추기 (gap 감안) */
+    padding: 7px;
+  }
+  .pick_img {
+    .pick_img {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* 정사각형 비율 유지 */
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .pick_img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ssgsag_pick {
+      font-size: 20px;
+    }
+
+    .pick_txt strong {
+      font-size: 16px;
+    }
+  }
+}
