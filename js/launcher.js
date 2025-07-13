@@ -1,6 +1,6 @@
 // 모든 HTML 요소, 이미지까지 다 로딩된 다음 실행되도록 함
 window.addEventListener("load", function () {
-  // 마우스 올라간 버튼에 줄 클래스 이름 (마음대로 바꿔도 됨)
+  // 마우스 올라간 버튼에 줄 클래스 이름
   const hoverClass = "category_mouse";
 
   // 모든 버튼(.launcher_icon)을 선택해서 리스트로 가져옴
