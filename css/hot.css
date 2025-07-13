@@ -73,6 +73,7 @@
   height: 100px;
   flex: 1;
   max-width: 423px;
+  min-width: 0;
 }
 .option_purple {
   display: inline-block;
@@ -100,10 +101,93 @@
   -webkit-line-clamp: 1; /* 1줄로 */
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis; /* 넘치는 텍스트 말줄임표 처리 */
+  text-overflow: ellipsis; /* 넘치는 텍스트 말줄임표 (...) 처리 */
 }
 
 .hot_day {
   color: #1c1c1c;
   font-size: 17px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  .hot .layout {
+    padding: 32px 16px;
+  }
+
+  .hot_title {
+    padding: 0;
+  }
+
+  .hot_title p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hot_column {
+    grid-template-columns: 1fr; /* 한 줄에 하나씩 */
+    gap: 16px; /* 카드 간 여백 추가 */
+  }
+
+  .hot_wrap {
+    padding: 0;
+  }
+
+  .hot_li {
+    width: 100%;
+  }
+
+  .hot_annc_image {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-height: 110px;
+    padding: 12px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  .hot_image {
+    flex-shrink: 0;
+    width: 92px;
+    height: 92px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .hot_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hot_annc_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-width: 0; /* 말줄임 적용을 위해 필요 */
+  }
+
+  .hot_annc_option {
+    margin-bottom: 4px;
+  }
+
+  .hot_annc_text {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    color: #444;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 두 줄 말줄임 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hot_day {
+    font-size: 13px;
+    color: #1c1c1c;
+    white-space: nowrap; /* 줄바꿈 방지 */
+  }
 }
