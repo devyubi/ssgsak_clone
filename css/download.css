@@ -10,7 +10,7 @@
 .app_download {
   display: flex;
   padding: 40px;
-  width: 988px;
+  max-width: 988px;
   height: 320px;
   gap: 56px;
   background-color: #fff;
@@ -69,4 +69,29 @@
   display: inline-block;
   margin-right: 4px;
   vertical-align: middle; /* 텍스트랑 수직 정렬 */
+}
+
+/* 반응형 (모바일) */
+@media screen and (max-width: 768px) {
+  .app_download {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .guide_img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  .download_guide {
+    width: 100%;
+    height: auto;
+  }
+
+  .app_guide_bt {
+    width: 100%;
+  }
 }
