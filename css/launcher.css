@@ -73,6 +73,9 @@
 
 /* 반응형 */
 @media screen and (max-width: 767px) {
+  .launcher {
+    padding-bottom: 0px;
+  }
   .launcher_wrap {
     width: 100%; /* 화면에 가득 차게 */
     padding: 0px 10px 0; /* 좌우 여백만 살짝 조정 */

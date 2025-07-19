@@ -112,7 +112,7 @@
 /* 반응형 */
 @media screen and (max-width: 768px) {
   .hot .layout {
-    padding: 32px 16px;
+    padding: 20px 16px 13px;
   }
 
   .hot_title {
@@ -145,6 +145,7 @@
     padding: 12px;
     text-decoration: none;
     overflow: hidden;
+    border-radius: 20px;
   }
 
   .hot_image {

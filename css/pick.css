@@ -128,7 +128,7 @@
 /* 반응형 */
 @media screen and (max-width: 767px) {
   .pick {
-    padding: 32px 16px;
+    padding: 20px 16px 10px;
   }
 
   .pick .layout {
