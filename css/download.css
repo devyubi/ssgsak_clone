@@ -82,67 +82,85 @@
 
 /* 반응형 */
 @media screen and (max-width: 768px) {
-  .app_download {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 40px;
-    gap: 32px;
+  .download {
+    padding: 0px;
+  }
+  .download .layout {
+    padding: 32px 24px;
+  }
+  .app_download.mb_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img title"
+      "img desc"
+      "store google";
+    gap: 12px;
     background-color: #fff;
     border-radius: 20px;
-    box-sizing: border-box;
+  }
+
+  .mb_item {
+    width: 100%;
+  }
+
+  .mb_img {
+    grid-area: img;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
-  .guide_img {
-    width: 120px;
+
+  .mb_img .guide_img {
+    width: 100%;
+    max-width: 120px;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    flex-shrink: 0;
-  }
-  .download_guide {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    min-width: 0;
   }
 
-  .download_guide span {
+  .mb_text {
+    grid-area: title;
+    padding-top: 8px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: #1c1c1c;
   }
 
-  .download_guide p {
-    font-size: 14px;
-    color: #777;
-    line-height: 1.6;
-    padding: 16px 0;
+  .mb_text p {
     margin: 0;
-  }
-
-  .app_guide {
-    display: flex;
-    gap: 12px;
-    flex-wrap: nowrap;
-    width: 100%;
-    max-width: 492px;
-  }
-
-  .app_guide_bt {
-    width: 100%;
-    height: 50px;
     font-size: 14px;
-    white-space: nowrap;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .mb_text span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .mb_store {
+    grid-area: store;
+  }
+
+  .mb_google {
+    grid-area: google;
+  }
+
+  .mb_store button,
+  .mb_google button {
+    width: 100%;
+    font-size: 14px;
+    height: 44px;
+    padding: 0 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    padding: 0 12px;
+    gap: 6px;
   }
 
-  .app_guide_img {
+  .mb_store .app_guide_img,
+  .mb_google .app_guide_img {
     width: 18px;
     height: 18px;
   }
