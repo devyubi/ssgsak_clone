@@ -45,6 +45,7 @@
 }
 .just_img:hover {
   background-color: #f0f1f6;
+  border-radius: 18px;
 }
 .just_img img {
   transition: all 0.5s;
