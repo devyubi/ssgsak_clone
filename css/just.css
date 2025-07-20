@@ -113,55 +113,55 @@
   color: #1c1c1c;
   font-size: 17px;
 }
+
+/* 반응형 */
+
 @media screen and (max-width: 768px) {
   .just .layout {
     padding: 20px 16px 13px;
   }
 
   .just_title {
-    padding: 0px;
+    padding-bottom: 16px;
+    padding-left: 0;
+  }
+
+  .just_title p {
+    font-size: 20px;
   }
 
   .just_list {
-    display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2열 */
-    gap: 10px;
+    gap: 8px;
   }
 
   .just_list li {
-    width: 356.5px;
-    height: 465.5px;
-    margin: 0 auto; /* 가운데 정렬 */
-  }
-  .just_list li:hover .just_img img {
-    transform: none;
+    width: 100%;
   }
 
   .just_img {
-    width: 338.5px;
+    width: 100%;
     padding: 8px;
   }
-  .just_img:hover {
-    background-color: #ffffff;
-  }
+
   .just_img img {
-    width: 338.5px;
-    height: 338.5px;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 정사각형 */
+    height: auto;
   }
+
+  .just_img:hover {
+    background-color: transparent;
+  }
+
   .just_txt {
-    font-size: 15px;
-    font-weight: 500;
-    color: #444;
-    display: -webkit-box;
+    font-size: 14px;
     -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 24px; /* 텍스트 박스 높이 조정 */
+    height: 20px;
   }
 
   .just_day {
-    font-size: 17px;
-    padding-top: 10px;
+    font-size: 16px;
+    padding-top: 8px;
   }
 }

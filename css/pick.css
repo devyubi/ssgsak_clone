@@ -126,7 +126,7 @@
 }
 
 /* 반응형 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .pick {
     padding: 20px 16px 10px;
   }
@@ -145,7 +145,6 @@
     padding: 7px;
   }
   .pick_img {
-    .pick_img {
       width: 100%;
       aspect-ratio: 1 / 1; /* 정사각형 비율 유지 */
       overflow: hidden;
