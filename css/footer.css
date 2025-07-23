@@ -92,3 +92,75 @@
 .footer_img {
   margin-top: 15px;
 }
+
+@media (max-width: 768px) {
+  .footer_wrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer_top {
+    width: 100%;
+    height: auto;
+  }
+
+  .operating {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 고객센터는 위에 세로로 정렬 */
+  .footer_top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* 회사 + 비즈니스는 가로로 배치 (2열) */
+  .company,
+  .business {
+    width: 48%;
+    height: auto;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* 회사+비즈니스 wrap */
+  .footer_wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_wrap > .company,
+  .footer_wrap > .business {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* 두 개 나란히 정렬 */
+  .footer_wrap.row-2col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .footer_info {
+    font-size: 13px;
+  }
+
+  .inquiry {
+    gap: 5px;
+  }
+
+  .util_poilcy {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer_img {
+    display: flex;
+    gap: 10px;
+  }
+}
