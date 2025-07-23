@@ -1,166 +1,211 @@
+.footer {
+  width: 100%;
+}
+
 .footer .layout {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 56px 16px;
-  color: #1c1c1c;
-}
-.footer_wrap {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
+
+/* 1. 고객센터 + 회사 + 비즈니스 */
+.footer_wrap {
+  padding-top: 56px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 고객센터 */
 .footer_top {
-  width: 494px;
-  height: 104.41px;
+  flex: 1 1 300px;
+  min-width: 200px;
 }
 .customer_service {
   font-size: 17px;
   font-weight: 600;
+  color: #1c1c1c;
 }
-
 .tel {
+  padding: 20px 0px;
   font-size: 24px;
   font-weight: 700;
   color: #444;
-  padding-bottom: 10px;
-  padding-top: 10px;
 }
 .operating {
-  color: #aaa;
   font-size: 14px;
-  width: 494px;
-  height: 42.41px;
+  color: #aaa;
+  line-height: 1.8;
 }
-.company {
+
+.cb {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 237px;
-  height: 151.5px;
+  flex-direction: row;
+}
+
+/* 회사 */
+.company {
+  flex: 1 1 150px;
+  min-width: 237px;
 }
 .company strong {
+  font-size: 17px;
+  font-weight: 600;
   color: #1c1c1c;
 }
 .company p {
+  padding-top: 16px;
+  font-size: 16px;
   color: #777;
 }
+
+/* 비즈니스 */
 .business {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 237px;
-  height: 151.5px;
+  flex: 1 1 150px;
+  min-width: 237px;
 }
 .business strong {
+  font-size: 17px;
+  font-weight: 600;
   color: #1c1c1c;
 }
 .business p {
+  padding-top: 16px;
+  font-size: 16px;
   color: #777;
 }
-.footer_info {
-  gap: 10px;
-  color: #777;
-}
-.footer_info p {
-  font-size: 14px;
-}
-/* 중간 패딩 */
+
+/* 구분선 */
 .line {
   margin-top: 40px;
   margin-bottom: 40px;
-  border-bottom: 1px solid #eee;
-}
-.inquiry {
-  font-size: 14px;
-  display: flex;
+  border: 1px solid #f0f1f6;
 }
 
+.footer_bottom {
+  display: flex;
+  gap: 50%;
+}
+
+/* 회사 정보 */
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+  gap: 4px;
+}
+
+/* 문의 */
+.inquiry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 13px;
+  color: #777;
+  gap: 6px;
+}
 .inquiry p {
   cursor: pointer;
-  margin-left: 5px;
 }
+
 .bar {
-  margin-right: 5px;
+  cursor: none;
 }
+
+/* 약관, 정책 */
 .util_poilcy {
-  font-size: 14px;
+  display: flex;
+  padding-top: 18px;
+  gap: 24px;
+  padding-bottom: 56px;
+  font-size: 13px;
   color: #777;
-  margin-top: 15px;
+  cursor: pointer;
+}
+.util_poilcy strong {
+  font-weight: 600;
 }
 
-.policy {
-  gap: 10px;
-}
+/* 소셜 아이콘 */
 .footer_img {
-  margin-top: 15px;
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  padding-bottom: 56px;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* 반응형 */
+@media all and (max-width: 768px) {
   .footer_wrap {
-    flex-direction: column;
-    gap: 40px;
+    flex-wrap: wrap;
+    display: block;
+    padding-left: 0px;
   }
 
   .footer_top {
-    width: 100%;
-    height: auto;
+    padding-bottom: 60px;
   }
 
-  .operating {
-    width: 100%;
-    height: auto;
+  .customer_service {
+    font-size: 16px;
   }
 
-  /* 고객센터는 위에 세로로 정렬 */
-  .footer_top {
+  .tel {
+    font-size: 18px;
+  }
+
+  .cb {
+    display: flex;
+  }
+
+  .company strong,
+  .business strong {
+    font-size: 16px;
+  }
+
+  .company p,
+  .business p {
+    font-size: 15px;
+  }
+
+  .line {
+    margin-left: 20px;
+  }
+  .footer_bottom {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-
-  /* 회사 + 비즈니스는 가로로 배치 (2열) */
-  .company,
-  .business {
-    width: 48%;
-    height: auto;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  /* 회사+비즈니스 wrap */
-  .footer_wrap {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer_wrap > .company,
-  .footer_wrap > .business {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  /* 두 개 나란히 정렬 */
-  .footer_wrap.row-2col {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 0;
   }
 
   .footer_info {
+    white-space: nowrap;
+    display: flex;
+    padding-left: 0px;
+    line-height: 15px;
     font-size: 13px;
   }
 
   .inquiry {
-    gap: 5px;
+    padding-left: 0px;
+    font-size: 13px;
   }
 
   .util_poilcy {
-    display: flex;
+    padding-left: 0px;
+    font-size: 13px;
     flex-direction: column;
-    gap: 5px;
+    gap: 12px;
   }
 
   .footer_img {
-    display: flex;
-    gap: 10px;
+    /* display: flex;
+    flex-direction: column; */
   }
 }
