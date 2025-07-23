@@ -91,3 +91,50 @@
     opacity: 1;
   }
 }
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .popup_txt {
+    width: 90%; /* 화면 가로의 90% 차지 */
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .popup_txt p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .popup_x {
+    top: 12px;
+    right: 16px;
+  }
+
+  .popup_close {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+/* 아주 작은 화면 (최대 너비 480px) */
+@media (max-width: 480px) {
+  .popup_txt {
+    padding: 16px 12px;
+    border-radius: 10px;
+  }
+
+  .popup_txt p {
+    font-size: 14px;
+  }
+
+  .popup_close {
+    font-size: 14px;
+  }
+
+  .popup_x img {
+    width: 20px;
+    height: 20px;
+  }
+}
