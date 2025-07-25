@@ -161,7 +161,7 @@
 }
 
 /* 767px 이하 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header {
     margin-bottom: 0px !important;
     height: 54px; /* 기존 72px보다 더 작게 */
@@ -189,21 +189,6 @@
     /* 글자 없애기 */
     fill: none;
     transition-duration: 0.15s;
-    display: none;
-  }
-  .header_top_right {
-    display: none;
-  }
-}
-
-/* 166px 이하 */
-@media screen and (max-width: 166px) {
-  .logo img,
-  .menu_button img {
-    height: 20px;
-    justify-content: space-between;
-  }
-  .header_horizontal_menu {
     display: none;
   }
   .header_top_right {

@@ -75,7 +75,7 @@ window.addEventListener("DOMContentLoaded", () => {
       el: ".banner_slide_pg", // pg (요소)
       clickable: true, // 점 클릭 가능하게끔
     },
-    // 반응형 디자인
+    // 반응형 
     breakpoints: {
       // 760: {
       //   slidesPerView: 2, // 특정 너비에서 설정 바꾸고 싶을 때 2개
