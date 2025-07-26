@@ -10,7 +10,8 @@
 /* 배너 안 레이아웃 */
 .banner_wrap {
   position: relative; /* 내부에서 위치 조정 가능하게 설정 */
-  width: 80%; /* 부모 너비의 80%로 설정 */
+  width: 80%;
+  /* display: inline-block; */
   max-width: 640px; /* 최대 너비는 640px로 제한 */
   margin: 0 auto; /* 좌우 가운데 정렬 */
 }
@@ -18,6 +19,7 @@
 /* Swiper 슬라이드 wrapper */
 .sw_banner {
   overflow: visible; /* 넘치는 부분 보여줌 (슬라이드 그림자 등) */
+  width: 90vw;
   max-width: 640px;
   max-height: 320px;
   border-radius: 16px;
@@ -26,6 +28,14 @@
 
 .swiper-slide:hover {
   transform: scale(1.02); /* 2% 확대 효과 */
+}
+
+.banner_slide_item {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
 /* 슬라이드 이미지 */
@@ -106,9 +116,13 @@
 }
 
 /* 반응형 조정 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .banner {
     margin-top: 60px;
+  }
+
+  .banner_wrap {
+    padding-top: 10px;
   }
 
   .banner_slide_prev,
