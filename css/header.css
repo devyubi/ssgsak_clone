@@ -8,7 +8,7 @@
   border-bottom: 1px solid #e2e2e2;
   z-index: 999;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
 }
@@ -62,11 +62,6 @@
   display: block;
 }
 
-.header_horizontal_menu:hover a {
-  color: gray;
-  text-decoration: dashed;
-}
-
 .header_horizontal_menu a:hover {
   color: #1c1c1c;
   text-decoration: dashed;
@@ -78,9 +73,8 @@
   height: 5px;
   border-radius: 50%;
   background-color: #ff5247;
-  transform: translateX(-400%);
   right: -7px;
-  line-height: 130%;
+  top: 5px;
 }
 
 .header_top_right {
@@ -99,38 +93,63 @@
   font-weight: 500;
 }
 
+/* 로그인 버튼 */
 .login_bt {
   width: 76px;
   height: 38px;
   color: #fff;
   background-color: rgb(131, 127, 255);
   border-radius: 10px;
-  border: 0px;
+  border: 0;
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
 }
 
+/* 햄버거 버튼 */
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  padding: 20px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile_menu.active {
+  right: 0;
+}
+  
 .menu_button {
-  display: none;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  z-index: 1001;
+  width: 24px;
+  height: 24px;
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-}
-
-.menu_button img {
-  height: 24px;
   display: none;
 }
 
-/* 반응형 스타일 */
-@media all and (max-width: 768px) {
+.menu_button img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 반응형*/
+@media screen and (max-width: 1024px) {
   .header {
-    margin-bottom: 0 !important;
     height: 54px;
-    padding: 0 10px;
     border-bottom: none;
+    padding: 0 10px;
     transition-duration: 0.15s;
   }
 
@@ -139,23 +158,38 @@
     width: 77px;
   }
 
-  .header_horizontal_menu {
-    display: none;
-  }
-
+  .header_horizontal_menu,
   .header_top_right {
     display: none;
   }
 
   .menu_button {
-    height: 24px;
     display: flex;
-    margin-top: -12px;
+    align-items: center;
+    justify-content: center;
   }
 
   .menu_button img {
     height: 38px;
-    width: 100%;
-    display: block;
   }
+
+  .mobile_menu {
+    display: none;
+  }
+}
+
+/* 스크롤 내릴 때 줄어드는 효과 */
+.header_top_scroll {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo_hide {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon_hide {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }

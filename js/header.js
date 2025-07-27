@@ -23,3 +23,31 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// 화면 크기 변경 시 재렌더링 (768px 기준 반응형)
+let isLargeScreen = window.innerWidth >= 768;
+window.addEventListener("resize", () => {
+  const newLarge = window.innerWidth >= 768;
+  if (newLarge !== isLargeScreen) {
+    isLargeScreen = newLarge;
+    renderSlides();
+    initSwiper();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelectorAll(".menu_button");
+  const mobileMenu = document.querySelector(".mobile_menu");
+  const closeBtn = document.querySelector(".close_button");
+
+  menuBtn.forEach((btn) =>
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      mobileMenu.classList.add("active");
+    })
+  );
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+});
