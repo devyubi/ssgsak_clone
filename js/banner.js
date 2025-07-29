@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded", function () {
   renderSlides();
   initSwiper();
 
-  // 화면 크기 변경 시 재렌더링 (768px 기준 반응형)
+  // 화면 크기 변경 시 재렌더링 (768px 반응형)
   let isLargeScreen = window.innerWidth >= 768;
   window.addEventListener("resize", () => {
     const newLarge = window.innerWidth >= 768;
