@@ -52,7 +52,6 @@
 }
 
 .header_horizontal_menu a {
-  padding-right: 17px;
   font-size: 17px;
   font-weight: 500;
   color: #1c1c1c;
@@ -66,6 +65,24 @@
   color: #1c1c1c;
   text-decoration: dashed;
 }
+
+/* 마우스 갖다대면 전체 회색 처리 */
+.header_horizontal_menu:hover a {
+  color: gray;
+  /* 마우스 갖다대면 색 바뀜 */
+  text-decoration: dashed;
+}
+
+/* 마우스 올린 그 항목만 다시 검정색 */
+.header_horizontal_menu a:hover {
+  color: #1c1c1c;
+  text-decoration: dashed;
+}
+
+/* 이렇게도 쓸 수 있음. */
+/* .header_horizontal_menu:hover a:not(:hover) {
+  color: gray;
+} */
 
 .noti {
   position: absolute;
