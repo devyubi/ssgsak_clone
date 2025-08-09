@@ -137,22 +137,30 @@
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.mobile_menu_header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .mobile_menu.active {
   right: 0;
 }
 
-.menu_button {
+/* .menu_button {
   position: absolute;
   right: 18px;
   top: 18px;
   z-index: 1001;
   width: 24px;
   height: 24px;
-  background: none;
-  border: none;
   padding: 0;
   cursor: pointer;
   display: none;
+} */
+
+.close_button {
+  border: none;
+  background: none;
 }
 
 .menu_button img {
