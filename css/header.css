@@ -130,43 +130,110 @@
   right: -100%;
   width: 80%;
   height: 100vh;
-  background-color: #fff;
+  background-color: rgb(247, 247, 247);
   z-index: 1000;
   transition: right 0.3s ease;
   padding: 20px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.mobile_menu_header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .mobile_menu.active {
   right: 0;
 }
 
-/* .menu_button {
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  z-index: 1001;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  cursor: pointer;
-  display: none;
-} */
+.mobile_menu_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
 .close_button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
-.menu_button img {
+.mobile_menu_login {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.user_icon {
+  display: flex;
   width: 100%;
-  height: auto;
-  display: block;
+}
+
+.login_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  transition: background-color 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.login_btn:hover {
+  background-color: #f3f5f6;
+}
+
+.user_icon_left_img {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.login_btn span {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #1c1c1c;
+}
+
+.user_icon_right_img {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+}
+/* 나의 슥삭 */
+.my_ssgsag {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+}
+.main_links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.main_links li {
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category_section p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.category_section div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  cursor: pointer;
 }
 
 /* 반응형*/

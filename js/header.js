@@ -1,10 +1,26 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const headerTop = document.querySelector(".header_top"); // 클래스명 기준 수정
+  const headerTop = document.querySelector(".header_top");
   const logo = document.querySelector(".logo");
   const loginBtn = document.querySelector(".login_bt");
   const skyblueIcon = document.querySelector(".skyblue_icon");
   const blueIcon = document.querySelector(".blue_icon");
+  const hamburger = document.querySelector(".menu_button");
 
+  // 반응형 이벤트 (768px 일때 햄버거 안보이게끔)
+  function handleIconVisibility() {
+    const width = window.innerWidth;
+
+    if (width <= 768) {
+      hamburger.style.display = "block"; // 보이기
+    } else {
+      hamburger.style.display = "none"; // 숨기기
+    }
+  }
+
+  handleIconVisibility();
+  window.addEventListener("resize", handleIconVisibility);
+
+  // 스크롤 이벤트
   window.addEventListener("scroll", () => {
     const scY = window.scrollY;
 
